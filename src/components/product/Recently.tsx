@@ -15,9 +15,9 @@ const HomeScreen: React.FC = () => {
           </IconContext.Provider>
         </div>
       </div>
-      <div className="flex space-x-4 md:space-x-2">
+      <div className="flex mt-5 space-x-4 md:space-x-2">
         {imageProduct.map((image) => (
-          <div key={image.id} className="flex-none space-x-7">
+          <div key={image.id} className="flex-none space-x-5">
             <div>
               <Link
                 to={`/product/${image.id}`}
@@ -30,10 +30,10 @@ const HomeScreen: React.FC = () => {
                 />
               </Link>
             </div>
-            <div className="mt-6">
+            <div className="mt-6 mb-10">
               <Link
                 to="/cart"
-                className="px-4 py-2 bg-black text-white rounded-md text-lg"
+                className="px-2 py-2 bg-black text-white rounded-md text-lg"
               >
                 Add to cart{" "}
               </Link>

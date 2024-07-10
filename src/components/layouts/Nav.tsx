@@ -27,12 +27,12 @@ const Nav = () => {
     // console.log();
   };
   return (
-    <nav className="mt-20 overflow-x-hidden ">
-      <div className="flex space-x-6 px-5 md:px-0 lg:px-0">
+    <nav className="mt-20 overflow-x-hidden mb-5 container mx-auto ">
+      <div className="flex  items-center justify-between     space-x-6 px-5 md:px-0 lg:px-0 overflow-y-hidden ">
         {" "}
-        <div className="">
+        <div className="md:hidden lg:hidden">
           {" "}
-          <div className="flex pr-10 md:hidden ml-auto just bg-slate-600">
+          <div className="flex pr-10 md:hidden ml-auto just ">
             <button
               onClick={skrill}
               id="menu-btn"
@@ -45,7 +45,7 @@ const Nav = () => {
             </button>
           </div>
           <div ref={flexRef} className="hidden md:hidden">
-            <div className="absolute z-20 flex flex-col items-center self-end py-8 mt-10 space-y-6 font-bold bg-[#202731] animate__fadeInRight   animate__animated animate__fadeInRight animate__slower sm:w-auto sm:self-center left-6 right-6 drop-shadow-md text-white">
+            <div className="absolute rounded-xl z-20 flex flex-col items-center self-end py-8 mt-10 space-y-6 font-bold bg-slate-200 animate__fadeInRight   animate__animated animate__fadeInRight animate__slower sm:w-auto sm:self-center left-6 right-6 drop-shadow-md text-black">
               <div>
                 <Link to="/cart">Add to cart</Link>
               </div>
@@ -53,37 +53,42 @@ const Nav = () => {
                 {" "}
                 <Link to="/checkout ">Checkout</Link>
               </div>
+              <div>
+                {" "}
+                <Link to="/ ">Home</Link>
+              </div>
             </div>
           </div>
         </div>
-        <div className=" w-full">
-          <div className="container items-center mx-auto flex  justify-between">
-            <div className="hidden md:flex">
-              <p className="text-3xl font-bold">Futura</p>
+        <div className="hidden md:flex">
+          <p className="text-3xl font-bold">Futura</p>
+        </div>
+        <div className=" items-center  flex ">
+          <div className="border h-20 w-0 rounded-lg p-1 flex bg-[#D9D9D9] md:w-[40rem] md:h-[5rem]">
+            <div className="bg-[#D9D9D9]   md:w-[5rem] md:p-3">
+              <IconContext.Provider value={{ size: "3rem", color: "black" }}>
+                <CiSearch />
+              </IconContext.Provider>
             </div>
-            <div className="border h-20 w-0 rounded-lg p-1 flex bg-[#D9D9D9] md:w-[40rem] md:h-[5rem]">
-              <div className=" md:w-[5rem] md:p-3">
-                <IconContext.Provider value={{ size: "3rem", color: "black" }}>
-                  <CiSearch />
-                </IconContext.Provider>
-              </div>
-              <div className="md:w-[35rem] h-[]">
-                <input
-                  className="bg-[#D9D9D9] md:h-[4rem] md:w-[35rem] md:text-2xl outline-none text-left"
-                  type="text"
-                  placeholder="search"
-                />
-              </div>
+            <div className="md:w-[35rem] h-[]">
+              <input
+                className="bg-[#D9D9D9] h-[5rem] w-[20rem] md:text-2xl outline-none text-left"
+                type="text"
+                placeholder="search"
+              />
             </div>
           </div>
         </div>
         <div className=" md:flex md:space-x-3 lg:space-x-5 ">
-          <div className="hidden md:flex ">
+          <Link to={"/"}>
             {" "}
-            <IconContext.Provider value={{ size: "3rem", color: "black" }}>
-              <FaHeart />
-            </IconContext.Provider>
-          </div>
+            <div className="hidden md:flex ">
+              {" "}
+              <IconContext.Provider value={{ size: "3rem", color: "black" }}>
+                <FaHeart />
+              </IconContext.Provider>
+            </div>
+          </Link>
           <div className="flex">
             <Link to={"/cart"}>
               {" "}
