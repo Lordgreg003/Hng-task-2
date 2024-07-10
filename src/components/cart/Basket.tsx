@@ -308,7 +308,6 @@ const Basket = () => {
               </div>
             </div>
           </div>
-          <div></div>
         </div>
       </div>
     </section>
