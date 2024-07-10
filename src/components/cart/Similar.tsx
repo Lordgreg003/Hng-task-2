@@ -1,41 +1,18 @@
-import React from "react";
-import { cart1, cart2, cart3, cart4, cart5, cart6 } from "../../images";
+import { images } from "../../data/index";
 
 const Similar = () => {
   return (
-    <section className="container mx-auto space-y-5 mt-5">
-      <div className="text-2xl">Similar Product</div>
-      <div className=" lg:flex space-x-5">
-        <div className="flex space-x-3">
-          <div>
-            <img src={cart1} alt="" />
-          </div>
-          <div>
-            <img src={cart2} alt="" />
-          </div>
-          <div>
-            <img src={cart3} alt="" />
-          </div>
-          <div>
-            <img src={cart2} alt="" />
-          </div>
+    <div className="grid gap-4 p-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-8">
+      {images.map((image) => (
+        <div key={image.id} className="flex justify-center">
+          <img
+            src={image.src}
+            alt={image.alt}
+            className="object-cover rounded-lg shadow-lg w-full h-auto"
+          />
         </div>
-        <div className="flex space-x-3">
-          <div>
-            <img src={cart6} alt="" />
-          </div>
-          <div>
-            <img src={cart5} alt="" />
-          </div>
-          <div>
-            <img src={cart1} alt="" />
-          </div>
-          <div>
-            <img src={cart4} alt="" />
-          </div>
-        </div>
-      </div>
-    </section>
+      ))}
+    </div>
   );
 };
 

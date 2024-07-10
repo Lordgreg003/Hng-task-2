@@ -3,7 +3,7 @@ import { Input, payment } from "../../images";
 
 const Footer = () => {
   return (
-    <footer className="bg-black text-white p-6 mt-10">
+    <footer className="bg-black text-white p-6 mt-10 overflow-x-hidden">
       <div className="container mx-auto text-white">
         <div className="flex flex-wrap justify-between gap-4">
           <div className="flex-1 p-4 min-w-[200px]">

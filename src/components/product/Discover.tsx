@@ -10,6 +10,7 @@ import {
   perfume7,
   perfume8,
 } from "../../images";
+import { coverT } from "../../data";
 
 const Discover = () => {
   return (
@@ -22,126 +23,21 @@ const Discover = () => {
           </IconContext.Provider>
         </div>
       </div>
-      <div className="flex space-x-5">
-        <div className="space-y-3">
-          <div>
-            <img src={perfume} alt="" />
-          </div>
-          <div>
-            <p>Chanel </p>
-            <p>4.4 * N460,000</p>
-          </div>
-          <div>
-            <button className="bg-black px-[5rem] py-4 text-white rounded-xl">
-              Follow
-            </button>
-          </div>
+
+      <section className="container mx-auto mt-10 overflow-x-auto overflow-y-hidden lg:overflow-x-hidden">
+        <h1 className="font-bold text-2xl mb-4">Featured Products</h1>
+        <div className="flex space-x-4 md:space-x-2">
+          {coverT.map((image) => (
+            <div key={image.id} className="flex-none">
+              <img
+                src={image.src}
+                alt={image.alt}
+                className="rounded-lg max-w-[20rem] md:max-w-[15rem] sm:max-w-[10rem]"
+              />
+            </div>
+          ))}
         </div>
-        <div className="space-y-3">
-          <div>
-            <img src={perfume2} alt="" />
-          </div>
-          <div>
-            <p>Chanel </p>
-            <p>4.4 * N460,000</p>
-          </div>
-          <div>
-            <button className="bg-black px-[5rem] py-4 text-white rounded-xl">
-              Follow
-            </button>
-          </div>
-        </div>
-        <div className="space-y-3">
-          <div>
-            {" "}
-            <img src={perfume3} alt="" />
-          </div>
-          <div>
-            <p>Chanel </p>
-            <p>4.4 * N460,000</p>
-          </div>
-          <div>
-            <button className="bg-black px-[5rem] py-4 text-white rounded-xl">
-              Follow
-            </button>
-          </div>
-        </div>
-        <div className="space-y-3">
-          <div>
-            {" "}
-            <img src={perfume4} alt="" />
-          </div>{" "}
-          <div>
-            <p>Chanel </p>
-            <p>4.4 * N460,000</p>
-          </div>
-          <div>
-            <button className="bg-black px-[5rem] py-4 text-white rounded-xl">
-              Follow
-            </button>
-          </div>
-        </div>
-        <div className="space-y-3">
-          <div>
-            {" "}
-            <img src={perfume5} alt="" />
-          </div>{" "}
-          <div>
-            <p>Chanel </p>
-            <p>4.4 * N460,000</p>
-          </div>
-          <div>
-            <button className="bg-black px-[5rem] py-4 text-white rounded-xl">
-              Follow
-            </button>
-          </div>
-        </div>
-        <div className="space-y-3">
-          <div>
-            {" "}
-            <img src={perfume6} alt="" />
-          </div>{" "}
-          <div>
-            <p>Chanel </p>
-            <p>4.4 * N460,000</p>
-          </div>
-          <div>
-            <button className="bg-black px-[5rem] py-4 text-white rounded-xl">
-              Follow
-            </button>
-          </div>
-        </div>
-        <div className="space-y-3">
-          <div>
-            {" "}
-            <img src={perfume7} alt="" />
-          </div>{" "}
-          <div>
-            <p>Chanel </p>
-            <p>4.4 * N460,000</p>
-          </div>
-          <div>
-            <button className="bg-black px-[5rem] py-4 text-white rounded-xl">
-              Follow
-            </button>
-          </div>
-        </div>
-        <div className="space-y-3">
-          <div>
-            {" "}
-            <img src={perfume8} alt="" />
-          </div>{" "}
-          <div>
-            <p>Chanel </p>
-            <p>4.4 * N460,000</p>
-          </div>
-          <div>
-            <button className="bg-black px-[5rem] py-4 text-white rounded-xl">
-              Follow
-            </button>
-          </div>
-        </div>
-      </div>
+      </section>
     </section>
   );
 };
