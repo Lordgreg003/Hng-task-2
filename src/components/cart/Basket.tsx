@@ -282,7 +282,7 @@ const Basket = () => {
                 </div>
                 <div>
                   <Link
-                    className="px-[9rem] py-5 md:px-[11rem] md:py-4 bg-[#D9D9D9] md:text-3xl rounded-xl"
+                    className="px-[8rem] py-5 md:px-[11rem] md:py-4 bg-[#D9D9D9] md:text-3xl rounded-xl"
                     to={"/"}
                   >
                     Continue shopping
@@ -308,7 +308,6 @@ const Basket = () => {
               </div>
             </div>
           </div>
-          <div></div>
         </div>
       </div>
     </section>

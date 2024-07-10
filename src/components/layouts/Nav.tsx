@@ -27,8 +27,8 @@ const Nav = () => {
     // console.log();
   };
   return (
-    <nav className="mt-20 overflow-x-hidden mb-5 container mx-auto ">
-      <div className="flex  items-center justify-between     space-x-6 px-5 md:px-0 lg:px-0 overflow-y-hidden ">
+    <nav className="mt-20 overflow-x-hidden mb-5 container mx-auto  ">
+      <div className="flex overflow-x-hidden  items-center justify-between    space-x-6 px-5 md:px-0 lg:px-0 overflow-y-hidden ">
         {" "}
         <div className="md:hidden lg:hidden">
           {" "}
@@ -63,7 +63,7 @@ const Nav = () => {
         <div className="hidden md:flex">
           <p className="text-3xl font-bold">Futura</p>
         </div>
-        <div className=" items-center  flex ">
+        <div className=" items-center w-full md:pl-[30rem]  flex ">
           <div className="border h-20 w-0 rounded-lg p-1 flex bg-[#D9D9D9] md:w-[40rem] md:h-[5rem]">
             <div className="bg-[#D9D9D9]   md:w-[5rem] md:p-3">
               <IconContext.Provider value={{ size: "3rem", color: "black" }}>
