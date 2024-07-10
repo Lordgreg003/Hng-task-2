@@ -13,7 +13,7 @@ const Basket = () => {
       <div className="md:flex space-x-[5rem]">
         <div className=" md:flex md:flex-col lg:flex lg:flex-row lg:space-x-5">
           {" "}
-          <div className="space-y-5  ">
+          <div className="space-y-5 px-10  ">
             <h1 className="font-bold text-2xl">My basket</h1>
             <div className="lg:max-w-[30rem] md:max-w-[30rem]  max-w-[25rem]">
               <img src={cartsandals} alt="" />
@@ -164,10 +164,10 @@ const Basket = () => {
         </div>
 
         <div>
-          <div className="space-y-5">
+          <div className="-ml-16 md:-ml-0 lg:-ml-0  bg-slate-800  ">
             <h1 className="text-3xl">Mora’s Leather Sandals</h1>
             <div className="flex">
-              <div className="flex">
+              <div className="*:inline-block">
                 <IconContext.Provider value={{ size: "1rem", color: "black" }}>
                   <FaStar />
                 </IconContext.Provider>
@@ -190,7 +190,7 @@ const Basket = () => {
               <div className="border rounded-lg p-1 flex  md:w-[40rem] md:h-[5rem]">
                 <div className="md:w-[30rem] h-[]">
                   <input
-                    className=" h-[4rem] w-[35rem] text-2xl outline-none text-left"
+                    className=" md:h-[4rem] md:w-[35rem] text-2xl outline-none text-left"
                     type="text"
                     placeholder="Add address"
                   />
@@ -199,14 +199,14 @@ const Basket = () => {
               <div className="border rounded-lg p-1 flex border-solid md:w-[40rem] md:h-[5rem]">
                 <div className="md:w-[35rem] h-[]">
                   <input
-                    className=" h-[4rem] w-[35rem] text-2xl outline-none text-left"
+                    className=" md:h-[4rem] md:w-[35rem] text-2xl outline-none text-left"
                     type="text"
                     placeholder="search"
                   />
                 </div>
                 <div className="flex items-center">
-                  <div className="text-3xl">Xs</div>
-                  <div className="-space-y-2">
+                  <div className="md:text-3xl">Xs</div>
+                  <div className="md:-space-y-2">
                     <div className="md:w-[5rem] md:p-3">
                       <IconContext.Provider
                         value={{ size: "1rem", color: "black" }}
@@ -227,9 +227,9 @@ const Basket = () => {
               <div className="border rounded-lg p-1 flex border-solid  md:w-[40rem] md:h-[5rem]">
                 <div className="md:w-[30rem] h-[]">
                   <input
-                    className=" h-[4rem] w-[35rem] text-2xl outline-none text-left"
+                    className=" md:h-[4rem] md:w-[35rem] text-2xl outline-none text-left"
                     type="text"
-                    placeholder="Colour"
+                    placeholder="Color"
                   />
                 </div>
                 <div className="flex items-center w-[15rem]">
@@ -255,14 +255,14 @@ const Basket = () => {
               <div className="border rounded-lg p-1 border-solid flex  md:w-[40rem] md:h-[5rem]">
                 <div className="md:w-[30rem] h-[]">
                   <input
-                    className=" h-[4rem] w-[35rem] text-2xl outline-none text-left"
+                    className=" md:h-[4rem] md:w-[35rem] text-2xl outline-none text-left"
                     type="text"
                     placeholder="search"
                   />
                 </div>
                 <div className="flex items-center">
-                  <div className="border rounded-full bg-[#D9D9D9] px-8 flex items-center">
-                    <p className="text-4xl">-</p>
+                  <div className="border rounded-full bg-[#D9D9D9] px-8 *:inline-block items-center">
+                    <p className="md:text-4xl">-</p>
                     <p className="text-4xl">2</p>
                     <p className="text-4xl">+</p>
                   </div>
@@ -274,7 +274,7 @@ const Basket = () => {
               <div className="space-y-14">
                 <div>
                   <Link
-                    className="px-[15rem] py-4 text-white bg-black text-3xl rounded-xl"
+                    className=" md:px-[15rem] md:py-4 text-white bg-black text-3xl rounded-xl"
                     to={"/checkout"}
                   >
                     Checkout
@@ -290,7 +290,7 @@ const Basket = () => {
                 </div>
                 <div>
                   <Link
-                    className="px-[13rem] py-4 bg-[#D9D9D9] text-3xl rounded-xl"
+                    className="md:px-[13rem] text-nowrap md:py-4 bg-[#D9D9D9] md:text-3xl rounded-xl"
                     to={"/"}
                   >
                     Refund policy

@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const Checkout = () => {
   return (
-    <section className="container mx-auto mt-10 ">
+    <section className="container mx-auto mt-10 overflow-x-hidden ">
       <div className=" lg:flex">
         <div className="w-1/2 md:flex space-x-5 my-10">
           <div className="lg:max-w-[30rem] md:max-w-[30rem]  max-w-[25rem]">

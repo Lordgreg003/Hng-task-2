@@ -1,15 +1,7 @@
 import { MdNavigateNext } from "react-icons/md";
 import { IconContext } from "react-icons";
-import {
-  cloths,
-  frame24,
-  frame25,
-  fynboi,
-  fynboi1,
-  fyngal,
-  fyngal2,
-  fyngal3,
-} from "../../images";
+import { alsoImage } from "../../data/index";
+import { Link } from "react-router-dom";
 
 const Alsolike = () => {
   return (
@@ -22,35 +14,20 @@ const Alsolike = () => {
           </IconContext.Provider>
         </div>
       </div>
-      <div className="flex space-x-5 ">
-        <div>
-          <img src={frame24} alt="" />
+      <section className="container mx-auto mt-10 overflow-x-auto overflow-y-hidden">
+        <h1 className="font-bold text-2xl mb-4">Featured Products</h1>
+        <div className="flex space-x-4 md:space-x-2">
+          {alsoImage.map((image) => (
+            <div key={image.id} className="flex-none">
+              <img
+                src={image.src}
+                alt={image.alt}
+                className="rounded-lg max-w-[20rem] md:max-w-[15rem] sm:max-w-[10rem]"
+              />
+            </div>
+          ))}
         </div>
-        <div>
-          <img src={frame25} alt="" />
-        </div>
-        <div>
-          <img src={fyngal} alt="" />
-        </div>
-        <div>
-          <img src={fyngal} alt="" />
-        </div>
-        <div>
-          <img src={fyngal2} alt="" />
-        </div>
-        <div>
-          <img src={cloths} alt="" />
-        </div>
-        <div>
-          <img src={fynboi} alt="" />
-        </div>
-        <div>
-          <img src={fyngal3} alt="" />
-        </div>
-        <div>
-          <img src={fynboi1} alt="" />
-        </div>
-      </div>
+      </section>
     </section>
   );
 };
