@@ -164,7 +164,7 @@ const Basket = () => {
         </div>
 
         <div>
-          <div className="-ml-16 md:-ml-0 lg:-ml-0  bg-slate-800  ">
+          <div className="-ml-16 md:-ml-0 lg:-ml-0   ">
             <h1 className="text-3xl">Mora’s Leather Sandals</h1>
             <div className="flex">
               <div className="*:inline-block">
@@ -233,7 +233,7 @@ const Basket = () => {
                   />
                 </div>
                 <div className="flex items-center w-[15rem]">
-                  <div className="text-2xl  text-nowrap">Light gray</div>
+                  <div className="md:text-2xl  text-nowrap">Light gray</div>
                   <div className="-space-y-2">
                     <div className="md:w-[5rem] md:p-3">
                       <IconContext.Provider
@@ -261,10 +261,10 @@ const Basket = () => {
                   />
                 </div>
                 <div className="flex items-center">
-                  <div className="border rounded-full bg-[#D9D9D9] px-8 *:inline-block items-center">
+                  <div className="border rounded-full bg-[#D9D9D9] px-8 flex items-center">
                     <p className="md:text-4xl">-</p>
-                    <p className="text-4xl">2</p>
-                    <p className="text-4xl">+</p>
+                    <p className="md:text-4xl">2</p>
+                    <p className="md:text-4xl">+</p>
                   </div>
                 </div>
               </div>
@@ -274,7 +274,7 @@ const Basket = () => {
               <div className="space-y-14">
                 <div>
                   <Link
-                    className=" md:px-[15rem] md:py-4 text-white bg-black text-3xl rounded-xl"
+                    className="px-[9rem] py-5 md:px-[15rem] md:py-4 text-white bg-black text-3xl rounded-xl"
                     to={"/checkout"}
                   >
                     Checkout
@@ -282,7 +282,7 @@ const Basket = () => {
                 </div>
                 <div>
                   <Link
-                    className="md:px-[11rem] md:py-4 bg-[#D9D9D9] md:text-3xl rounded-xl"
+                    className="px-[9rem] py-5 md:px-[11rem] md:py-4 bg-[#D9D9D9] md:text-3xl rounded-xl"
                     to={"/"}
                   >
                     Continue shopping
@@ -290,7 +290,7 @@ const Basket = () => {
                 </div>
                 <div>
                   <Link
-                    className="md:px-[13rem] text-nowrap md:py-4 bg-[#D9D9D9] md:text-3xl rounded-xl"
+                    className="px-[10rem] py-5 md:px-[13rem] text-nowrap md:py-4 bg-[#D9D9D9] md:text-3xl rounded-xl"
                     to={"/"}
                   >
                     Refund policy

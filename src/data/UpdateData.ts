@@ -12,8 +12,8 @@ const Updatedata: Image[] = [
   {
     id: 1,
     link: "",
-    about: "",
-    amount: "",
+    about: "chrysallis",
+    amount: "waiting for details",
     src: frame11,
     alt: "Description 1",
   },
