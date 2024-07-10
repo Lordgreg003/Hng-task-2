@@ -6,7 +6,7 @@ import { IconContext } from "react-icons";
 
 const HomeScreen: React.FC = () => {
   return (
-    <section className="container mx-auto mt-10 overflow-x-auto overflow-y-hidden">
+    <section className="container mx-auto mt-10 overflow-x-auto overflow-y-hidden lg:overflow-x-hidden">
       <div className="flex items-center">
         <div className="text-xl font-bold">Recently reviewed</div>
         <div className="border rounded-full bg-[#D9D9D9]">
@@ -31,17 +31,16 @@ const HomeScreen: React.FC = () => {
               </Link>
             </div>
             <div className="mt-6">
-        <Link
-          to="/cart"
-          className="px-4 py-2 bg-black text-white rounded-md text-lg"
-        >
-          Add to cart{" "}
-        </Link>
-      </div>
+              <Link
+                to="/cart"
+                className="px-4 py-2 bg-black text-white rounded-md text-lg"
+              >
+                Add to cart{" "}
+              </Link>
+            </div>
           </div>
         ))}
       </div>
-     
     </section>
   );
 };
