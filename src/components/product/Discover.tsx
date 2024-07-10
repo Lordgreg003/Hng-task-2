@@ -1,15 +1,5 @@
 import { MdNavigateNext } from "react-icons/md";
 import { IconContext } from "react-icons";
-import {
-  perfume,
-  perfume2,
-  perfume3,
-  perfume4,
-  perfume5,
-  perfume6,
-  perfume7,
-  perfume8,
-} from "../../images";
 import { coverT } from "../../data";
 
 const Discover = () => {
