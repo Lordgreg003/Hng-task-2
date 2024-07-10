@@ -1,7 +1,8 @@
 import { MdNavigateNext } from "react-icons/md";
 import { IconContext } from "react-icons";
-import { alsoImage } from "../../data/index";
+// import { alsoImage } from "../../data/index";
 import { Link } from "react-router-dom";
+import { alsoImage } from "../../data";
 
 const Alsolike = () => {
   return (
@@ -15,9 +16,8 @@ const Alsolike = () => {
         </div>
       </div>
       <section className="container mx-auto mt-10 overflow-x-auto overflow-y-hidden">
-        <h1 className="font-bold text-2xl mb-4">Featured Products</h1>
         <div className="flex space-x-4 md:space-x-2">
-          {alsoImage.map((image) => (
+          {alsoImage.map((image: any) => (
             <div key={image.id} className="flex-none">
               <img
                 src={image.src}
