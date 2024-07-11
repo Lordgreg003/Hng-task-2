@@ -1,4 +1,4 @@
-import { Nav, Footer } from "../components/layouts";
+import { Nav, Sec, Footer } from "../components/layouts";
 import {
   Product,
   Recently,
@@ -11,6 +11,7 @@ const LandingScreen = () => {
   return (
     <div>
       <Nav />
+      {/* <Sec /> */}
       <Category />
       <Product />
       <Recently />

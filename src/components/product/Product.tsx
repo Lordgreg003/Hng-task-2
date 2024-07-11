@@ -3,6 +3,7 @@ import { MdNavigateNext } from "react-icons/md";
 import { IconContext } from "react-icons";
 import { Updatedata } from "../../data/index";
 import { Link } from "react-router-dom";
+import "../../css/Style.css"; // Import the custom CSS file
 
 const Product = () => {
   return (
@@ -15,11 +16,11 @@ const Product = () => {
           </IconContext.Provider>
         </div>
       </div>
-      <section className="container mx-auto  overflow-x-auto overflow-y-hidden lg:overflow-x-hidden">
+      <section className="container mx-auto overflow-x-auto overflow-y-hidden scrollbar-hide">
         <div className="flex space-x-4 md:space-x-2">
           {Updatedata.map((image) => (
-            <div key={image.id} className="  my-5">
-              <div className="  flex my-7 p-6">
+            <div key={image.id} className="my-5">
+              <div className="flex my-7 p-6">
                 <div>
                   <img
                     src={image.src}
@@ -28,7 +29,7 @@ const Product = () => {
                   />
                 </div>
                 <div className="space-x-5 pt-5">
-                  <div className="w-[10rem] text-2xl px-6 ">{image.about}</div>
+                  <div className="w-[10rem] text-2xl px-6">{image.about}</div>
                   <div className="w-[10rem] text-xl text-nowrap">
                     {image.amount}
                   </div>

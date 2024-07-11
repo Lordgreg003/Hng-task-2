@@ -1,6 +1,8 @@
+import React from "react";
 import { MdNavigateNext } from "react-icons/md";
 import { IconContext } from "react-icons";
 import { coverT } from "../../data";
+import "../../css/Style.css"; // Import the custom CSS file
 
 const Discover = () => {
   return (
@@ -14,8 +16,7 @@ const Discover = () => {
         </div>
       </div>
 
-      <section className="container mx-auto mt-10 overflow-x-auto overflow-y-hidden lg:overflow-x-hidden">
-        <h1 className="font-bold text-2xl mb-4">Featured Products</h1>
+      <section className="container mx-auto mt-10 overflow-x-auto overflow-y-hidden scrollbar-hide">
         <div className="flex space-x-4 md:space-x-2">
           {coverT.map((image) => (
             <div key={image.id} className="flex-none">

@@ -30,6 +30,33 @@
   transition: all 0.5s;
 }
 
+/* Custom scrollbar styling */
+/* Custom CSS for hiding scrollbar until user interacts with it */
+.scrollbar-hide::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  background: transparent; /* Hide scrollbar */
+}
+
+.scrollbar-hide {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+.scrollbar-hide:hover::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.scrollbar-hide:hover::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+.scrollbar-hide:hover::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 .hamburger-top {
   position: absolute;
   top: 0;
