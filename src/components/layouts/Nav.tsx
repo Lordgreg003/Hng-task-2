@@ -9,9 +9,9 @@ const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className=" mt-5  h-[5rem] w-full  top-0">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+    <nav className=" mt-5  h-[5rem] w-full  top-0 overflow-x-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
+        <div className=" md:flex items-center justify-between h-16 space-y-3 md:space-y-0 lg:space-y-0 ">
           {/* First div with "Futura" */}
           <div className="flex-shrink-0 text-black text-2xl font-bold">
             Futura
@@ -52,31 +52,32 @@ const Navbar: React.FC = () => {
                 <FaHeart className="text-black text-2xl" />
               </div>
             </div>
-          </div>
-
-          {/* Mobile menu button */}
-          <div className="md:hidden flex items-center">
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="text-black focus:outline-none"
-            >
-              <svg
-                className="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
+            {/* Mobile menu button */}
+            <div className="md:hidden flex items-center">
+              <button
+                onClick={() => setIsOpen(!isOpen)}
+                className="text-black focus:outline-none"
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d={
-                    !isOpen ? "M4 6h16M4 12h16m-7 6h7" : "M6 18L18 6M6 6l12 12"
-                  }
-                />
-              </svg>
-            </button>
+                <svg
+                  className="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d={
+                      !isOpen
+                        ? "M4 6h16M4 12h16m-7 6h7"
+                        : "M6 18L18 6M6 6l12 12"
+                    }
+                  />
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
       </div>
