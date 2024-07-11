@@ -1,8 +1,9 @@
+import React from "react";
 import { MdNavigateNext } from "react-icons/md";
 import { IconContext } from "react-icons";
-// import { alsoImage } from "../../data/index";
 import { Link } from "react-router-dom";
 import { alsoImage } from "../../data";
+import "../../css/Style.css"; // Import the custom CSS file
 
 const Alsolike = () => {
   return (
@@ -15,7 +16,7 @@ const Alsolike = () => {
           </IconContext.Provider>
         </div>
       </div>
-      <section className="container mx-auto mt-10 overflow-x-auto overflow-y-hidden">
+      <section className="container mx-auto mt-10 overflow-x-auto overflow-y-hidden scrollbar-hide">
         <div className="flex space-x-4 md:space-x-2">
           {alsoImage.map((image: any) => (
             <div key={image.id} className="flex-none">
