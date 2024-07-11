@@ -75,7 +75,7 @@ const Category = () => {
           </div>
         </div>
       </div>
-      <div className="md:hidden lg:hidden flex mb-5 h-12  justify-center space-x-9">
+      <div className="md:hidden lg:hidden flex mb-5 h-12  justify-center space-x-3">
         <Link to={"/cart"}>
           <div className="border flex p-3 items-center space-x-3 rounded-xl">
             <div>

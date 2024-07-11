@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { LandingScreen, Cart, CheckoutScreen } from "./screens/index";
+import { ProductScreen, Cart, CheckoutScreen } from "./screens/index";
 import "./App.css";
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route>
-            <Route path="/" element={<LandingScreen />} />
+            <Route path="/" element={<ProductScreen />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/checkout" element={<CheckoutScreen />} />
           </Route>

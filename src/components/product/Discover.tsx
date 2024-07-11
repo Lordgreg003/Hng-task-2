@@ -2,17 +2,21 @@ import React from "react";
 import { MdNavigateNext } from "react-icons/md";
 import { IconContext } from "react-icons";
 import { coverT } from "../../data";
+import { Link } from "react-router-dom";
 import "../../css/Style.css"; // Import the custom CSS file
 
 const Discover = () => {
   return (
-    <section className="container mx-auto space-y-5 mt-5">
+    <section className="container mx-auto space-y-5 mt-5 overflow-x-hidden">
       <div className="flex items-center">
         <div className="text-xl">Discover new brands</div>
         <div className="border rounded-full bg-[#D9D9D9]">
-          <IconContext.Provider value={{ size: "1rem", color: "black" }}>
-            <MdNavigateNext />
-          </IconContext.Provider>
+          <Link to={"/cart"}>
+            {" "}
+            <IconContext.Provider value={{ size: "1rem", color: "black" }}>
+              <MdNavigateNext />
+            </IconContext.Provider>
+          </Link>
         </div>
       </div>
 

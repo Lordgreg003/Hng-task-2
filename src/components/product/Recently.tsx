@@ -11,9 +11,11 @@ const HomeScreen: React.FC = () => {
       <div className="flex items-center">
         <div className="text-xl font-bold">Recently reviewed</div>
         <div className="border rounded-full bg-[#D9D9D9]">
-          <IconContext.Provider value={{ size: "1rem", color: "black" }}>
-            <MdNavigateNext />
-          </IconContext.Provider>
+          <Link to={"/cart"}>
+            <IconContext.Provider value={{ size: "1rem", color: "black" }}>
+              <MdNavigateNext />
+            </IconContext.Provider>
+          </Link>
         </div>
       </div>
       <div className="flex mt-5 space-x-4 md:space-x-2">
