@@ -7,7 +7,7 @@ import "../../css/Style.css";
 
 const HomeScreen: React.FC = () => {
   return (
-    <section className="container relative mx-auto mt-10 scroll-smooth overflow-x-auto overflow-y-hidden lg:overflow-x-hidden scrollbar-hide">
+    <section className="container relative mx-auto mt-10 scroll-smooth overflow-x-auto overflow-y-hidden  scrollbar-hide">
       <div className="flex items-center">
         <div className="text-xl font-bold">Recently reviewed</div>
         <div className="border rounded-full bg-[#D9D9D9]">

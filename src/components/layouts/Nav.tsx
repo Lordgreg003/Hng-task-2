@@ -9,8 +9,8 @@ const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className=" mt-5  h-[5rem] w-full  top-0 overflow-x-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
+    <nav className="  h-[12rem] p-5 w-full overflow-x-hidden">
+      <div className="max-w-7xl mx-auto  px-4 sm:px-6 lg:px-8 ">
         <div className=" md:flex items-center justify-between h-16 space-y-3 md:space-y-0 lg:space-y-0 ">
           {/* First div with "Futura" */}
           <div className="flex-shrink-0 text-black text-2xl font-bold">
@@ -47,9 +47,14 @@ const Navbar: React.FC = () => {
 
             {/* Icons */}
             <div className="flex items-center space-x-4">
-              <BsCart3 className="text-black text-2xl md:text-2xl" />
+              <Link to={"/cart"}>
+                <BsCart3 className="text-black text-2xl md:text-2xl" />
+              </Link>
               <div className="hidden md:flex space-x-4">
-                <FaHeart className="text-black text-2xl" />
+                <Link to={"/"}>
+                  {" "}
+                  <FaHeart className="text-black text-2xl" />
+                </Link>
               </div>
             </div>
             {/* Mobile menu button */}

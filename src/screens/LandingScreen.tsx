@@ -11,7 +11,6 @@ const LandingScreen = () => {
   return (
     <div>
       <Nav />
-      {/* <Sec /> */}
       <Category />
       <Product />
       <Recently />
