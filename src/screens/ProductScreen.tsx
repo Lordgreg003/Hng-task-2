@@ -1,4 +1,4 @@
-import { Nav, Sec, Footer } from "../components/layouts";
+import { Nav, Footer } from "../components/layouts";
 import {
   Product,
   Recently,
@@ -7,7 +7,7 @@ import {
   Category,
 } from "../components/product";
 
-const LandingScreen = () => {
+const ProductScreen = () => {
   return (
     <div>
       <Nav />
@@ -21,4 +21,4 @@ const LandingScreen = () => {
   );
 };
 
-export default LandingScreen;
+export default ProductScreen;

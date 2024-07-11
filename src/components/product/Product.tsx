@@ -7,13 +7,16 @@ import "../../css/Style.css"; // Import the custom CSS file
 
 const Product = () => {
   return (
-    <section className="container mx-auto -space-y-5">
+    <section className="container mx-auto -space-y-5 overflow-x-hidden">
       <div className="flex items-center">
         <div className="text-xl font-bold">Order update</div>
         <div className="border rounded-full bg-[#D9D9D9]">
-          <IconContext.Provider value={{ size: "1rem", color: "black" }}>
-            <MdNavigateNext />
-          </IconContext.Provider>
+          <Link to={"/cart"}>
+            {" "}
+            <IconContext.Provider value={{ size: "1rem", color: "black" }}>
+              <MdNavigateNext />
+            </IconContext.Provider>
+          </Link>
         </div>
       </div>
       <section className="container mx-auto overflow-x-auto overflow-y-hidden scrollbar-hide">
