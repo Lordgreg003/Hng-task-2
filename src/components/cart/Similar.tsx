@@ -8,7 +8,7 @@ const Similar = () => {
           <img
             src={image.src}
             alt={image.alt}
-            className="object-cover rounded-lg shadow-lg w-full h-auto"
+            className="object-cover rounded-lg   h-auto"
           />
         </div>
       ))}

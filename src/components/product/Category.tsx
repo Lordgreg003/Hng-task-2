@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const Category = () => {
   return (
-    <div className="container   mx-auto   mt-8 ">
+    <div className="container   mx-auto h-[5rem] py-3 items-center overflow-y-hidden  overflow-x-hidden">
       <div className="hidden lg:flex">
         {" "}
         <div className="flex space-x-5 w-full justify-center">
@@ -75,7 +75,7 @@ const Category = () => {
           </div>
         </div>
       </div>
-      <div className="md:hidden lg:hidden flex mb-5 h-12 justify-center space-x-9">
+      <div className="md:hidden lg:hidden flex mb-5 h-12  justify-center space-x-9">
         <Link to={"/cart"}>
           <div className="border flex p-3 items-center space-x-3 rounded-xl">
             <div>
