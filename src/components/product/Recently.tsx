@@ -3,10 +3,11 @@ import { Link } from "react-router-dom";
 import { imageProduct } from "../../data/index"; // Assuming this is where your image data is stored
 import { MdNavigateNext } from "react-icons/md";
 import { IconContext } from "react-icons";
+import "../../css/Style.css";
 
 const HomeScreen: React.FC = () => {
   return (
-    <section className="container mx-auto mt-10 overflow-x-auto overflow-y-hidden lg:overflow-x-hidden">
+    <section className="container relative mx-auto mt-10 scroll-smooth overflow-x-auto overflow-y-hidden lg:overflow-x-hidden">
       <div className="flex items-center">
         <div className="text-xl font-bold">Recently reviewed</div>
         <div className="border rounded-full bg-[#D9D9D9]">
@@ -15,7 +16,7 @@ const HomeScreen: React.FC = () => {
           </IconContext.Provider>
         </div>
       </div>
-      <div className="flex mt-5 space-x-4 md:space-x-2">
+      <div className="flex mt-5 space-x-4 md:space-x-2 scrollbar-hide">
         {imageProduct.map((image) => (
           <div key={image.id} className="flex-none space-x-5">
             <div>

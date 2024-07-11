@@ -30,6 +30,21 @@
   transition: all 0.5s;
 }
 
+/* Custom scrollbar styling */
+.scrollbar-hide {
+  scrollbar-width: none; /* For Firefox */
+  -ms-overflow-style: none; /* For Internet Explorer and Edge */
+}
+
+div.scrollbar-hide::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Opera */
+}
+
+/* Show scrollbar when user interacts */
+section.relative:hover .scrollbar-hide::-webkit-scrollbar {
+  display: block;
+}
+
 .hamburger-top {
   position: absolute;
   top: 0;
