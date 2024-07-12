@@ -7,9 +7,9 @@ import "../../css/Style.css"; // Import the custom CSS file
 
 const Alsolike = () => {
   return (
-    <section className="container mx-auto space-y-5 mt-5 overflow-x-hidden">
+    <section className="container h-[20rem] py-5  mx-auto  space-y-5 mt-5 overflow-x-hidden">
       <div className="flex items-center">
-        <div className="text-xl">You might also like</div>
+        <div className="text-xl font-bold">You might also like</div>
         <div className="border rounded-full bg-[#D9D9D9]">
           <Link to={"/cart"}>
             {" "}
