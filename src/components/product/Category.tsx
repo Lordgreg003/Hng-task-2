@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const Category = () => {
   return (
-    <div className="container   mx-auto h-[5rem] py-3 items-center overflow-y-hidden  overflow-x-hidden">
+    <div className="container    mx-auto h-[5rem] py-3 items-center overflow-y-hidden  overflow-x-hidden">
       <div className="hidden lg:flex">
         {" "}
         <div className="flex space-x-5 w-full justify-center">

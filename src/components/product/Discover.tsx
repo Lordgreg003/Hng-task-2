@@ -7,7 +7,7 @@ import "../../css/Style.css"; // Import the custom CSS file
 
 const Discover = () => {
   return (
-    <section className="container mx-auto space-y-5 mt-5 overflow-x-hidden">
+    <section className="container mx-auto h-[28rem] py-7 space-y-5 mt-5 overflow-x-hidden">
       <div className="flex items-center">
         <div className="text-xl">Discover new brands</div>
         <div className="border rounded-full bg-[#D9D9D9]">

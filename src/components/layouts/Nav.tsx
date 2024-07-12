@@ -9,7 +9,7 @@ const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className=" h-[12rem]  md:p-5 w-full overflow-x-hidden overflow-y-hidden">
+    <nav className=" h-[12rem]   md:p-5 w-full overflow-x-hidden overflow-y-hidden">
       <div className="max-w-3xl  md:mx-auto pt-10   px-4 sm:px-6 lg:px-8 ">
         <div className=" md:flex items-center justify-between h-16 space-y-3 md:space-y-0 lg:space-y-0 ">
           {/* First div with "Futura" */}
