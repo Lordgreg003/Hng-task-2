@@ -7,7 +7,10 @@ import "../../css/Style.css"; // Import the custom CSS file
 
 const Product = () => {
   return (
-    <section className="container  mx-auto h-[15rem] py-10 overflow-y-hidden  -space-y-5  overflow-x-hidden">
+    <section
+      className="container  mx-auto h-[15rem] py-10 overflow-y-hidden  -space-y-5  overflow-x-hidden"
+      id="product"
+    >
       <div className="flex items-center">
         <div className="text-xl font-bold">Order update</div>
         <div className="border rounded-full bg-[#D9D9D9]">

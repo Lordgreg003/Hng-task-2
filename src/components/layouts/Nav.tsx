@@ -1,26 +1,83 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { CiSearch } from "react-icons/ci";
 import { BsCart3 } from "react-icons/bs";
 import { FaHeart } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import "animate.css";
+import scrollResults from "../../ScrollResult";
+import { ScrollItem } from "../../ScrollResult";
+import { Item } from "../../SearchResults";
+import SearchResults from "../../SearchResults";
+// import { animateScroll } from "react-scroll";
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [searchInput, setSearchInput] = useState("");
+  const [searchResults, setSearchResults] = useState<Item[]>([]);
+  const [scrollResults, setscrollResults] = useState<ScrollItem[]>([]);
+
+  const items: Item[] = [
+    { id: 1, name: "Home", path: "/" },
+    { id: 2, name: "Discover", path: "/discover" },
+    { id: 3, name: "Category", path: "/category" },
+    { id: 4, name: "Product", path: "/product" },
+    { id: 5, name: "Add to cart", path: "/cart" },
+    { id: 6, name: "Checkout", path: "/checkout" },
+    { id: 6, name: "Recently", path: "recently" },
+  ];
+
+  const ScrollItems: ScrollItem[] = [
+    { id: 1, name: "Recently", to: "recently" },
+    { id: 1, name: "", to: "recently" },
+    { id: 1, name: "Recently", to: "recently" },
+    { id: 1, name: "", to: "recently" },
+    { id: 1, name: "Recently", to: "recently" },
+    { id: 1, name: "", to: "recently" },
+  ];
+
+  console.log(ScrollItems);
+
+  useEffect(() => {
+    if (searchInput) {
+      const results = ScrollItems.filter((ScrollItem) =>
+        ScrollItem.name.toLowerCase().includes(searchInput.toLowerCase())
+      );
+      setscrollResults(results);
+    } else {
+      setscrollResults([]);
+    }
+  }, [searchInput]);
+
+  console.log(scrollResults);
+
+  useEffect(() => {
+    if (searchInput) {
+      const results = items.filter((item) =>
+        item.name.toLowerCase().includes(searchInput.toLowerCase())
+      );
+      setSearchResults(results);
+    } else {
+      setSearchResults([]);
+    }
+  }, [searchInput]);
+  console.log(setSearchResults);
+  const closeMenu = () => {
+    setIsOpen(false);
+  };
 
   return (
-    <nav className=" h-[12rem]   md:p-5 w-full overflow-x-hidden overflow-y-hidden">
-      <div className="max-w-3xl  md:mx-auto pt-10   px-4 sm:px-6 lg:px-8 ">
-        <div className=" md:flex items-center justify-between h-16 space-y-3 md:space-y-0 lg:space-y-0 ">
+    <>
+      <nav className="fixed bg-[#D9D9D9] top-0 left-0 w-full z-40 sm:h-[12rem] align-middle overflow-x-hidden overflow-y-hidden">
+        <div className="sm:flex h-[10rem] space-y-5 py-4 sm:justify-between -space-x-4 sm:mx-10 items-center">
           {/* First div with "Futura" */}
-          <div className="flex-shrink-0 text-black text-2xl font-bold">
+          <div className="flex-shrink-0 ml-10 text-black text-2xl font-bold">
             Futura
           </div>
 
           {/* Second div with menu, search, and icons */}
-          <div className="flex bg-re space-x-4 items-center">
+          <div className="flex justify-evenly space-x-4 items-center">
             {/* Menu bar */}
-            <div className="hidden  space-x-4">
+            <div className="hidden space-x-4">
               <Link to="/" className="text-gray-300 hover:text-white">
                 Home
               </Link>
@@ -35,7 +92,7 @@ const Navbar: React.FC = () => {
               </Link>
             </div>
             {/* Mobile menu button */}
-            <div className="md:hidden flex items-center">
+            <div className="sm:hidden flex items-center">
               <button
                 onClick={() => setIsOpen(!isOpen)}
                 className="text-black focus:outline-none"
@@ -62,57 +119,90 @@ const Navbar: React.FC = () => {
             </div>
 
             {/* Search bar */}
-            <div className="flex items-center border bg-[#D9D9D9] rounded-md  py-1">
+            <div className="flex items-center border border-black bg-[#D9D9D9] rounded-md py-1 relative">
               <CiSearch className="text-black" />
               <input
                 type="text"
                 placeholder="Search"
-                className="bg-[#D9D9D9] text-gray-300 focus:outline-none ml-2"
+                className="bg-[#D9D9D9] text-black focus:outline-none ml-2"
+                value={searchInput}
+                onChange={(e) => setSearchInput(e.target.value)}
               />
+              {searchResults.length > 0 && (
+                <SearchResults
+                  searchResults={searchResults}
+                  closeMenu={closeMenu}
+                />
+              )}
+              {/* {scrollResults.length > 0 && (
+                <scrollResults
+                  scrollResults={scrollResults}
+                  closeMenu={closeMenu}
+                />
+              )} */}
             </div>
 
             {/* Icons */}
-            <div className="flex items-center md:space-x-4">
+            <div className="flex items-center sm:space-x-4">
               <Link to={"/cart"}>
                 <BsCart3 className="text-black text-2xl md:text-2xl" />
               </Link>
-              <div className="hidden md:flex md:space-x-4">
+              <div className="hidden sm:flex md:space-x-4">
                 <Link to={"/"}>
-                  {" "}
                   <FaHeart className="text-black text-2xl" />
                 </Link>
               </div>
             </div>
           </div>
         </div>
-      </div>
 
-      {/* Mobile menu */}
-      {isOpen && (
-        <div className="md:hidden bg-black text-white z-20 animate__fadeInRight    animate__animated animate__fadeInRight animate__slower rounded-xl">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <Link
-              to="/"
-              className="block text-[#D9D9D9]  font-bold hover:text-white"
-            >
-              Home
-            </Link>
-            <Link
-              to="/cart"
-              className="block text-[#D9D9D9] font-bold hover:text-white"
-            >
-              Add to cart
-            </Link>
-            <Link
-              to="/checkout"
-              className="block text-[#D9D9D9] font-bold hover:text-white"
-            >
-              Checkout
-            </Link>
+        {/* Overlay to close the menu when clicking outside */}
+        {isOpen && (
+          <div
+            className="fixed inset-0 bg-black bg-opacity-50 z-20"
+            onClick={closeMenu}
+          ></div>
+        )}
+
+        {/* Mobile menu */}
+        {isOpen && (
+          <div className="md:hidden fixed inset-y-0 left-0 w-7/10 h-full bg-[#D9D9D9] text-center text-white z-30 animate__animated animate__fadeInLeft  rounded-r-xl p-4">
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+              <Link
+                to="/"
+                className="block text-black font-bold hover:text-slate-500"
+                onClick={closeMenu}
+              >
+                Home
+              </Link>
+              <Link
+                to="/cart"
+                className="block text-black font-bold hover:text-slate-500"
+                onClick={closeMenu}
+              >
+                Add to cart
+              </Link>
+              <Link
+                to="/checkout"
+                className="block text-black font-bold hover:text-slate-500"
+                onClick={closeMenu}
+              >
+                Checkout
+              </Link>
+              <Link
+                to="/recently"
+                className="block text-black font-bold hover:text-slate-500"
+                onClick={closeMenu}
+              >
+                Recently
+              </Link>
+            </div>
           </div>
-        </div>
-      )}
-    </nav>
+        )}
+      </nav>
+      {/* This div ensures the content below the navbar starts after the navbar's height */}
+      <div className="mt-[5rem]">{/* Content below the navbar */}</div>
+    </>
   );
 };
 

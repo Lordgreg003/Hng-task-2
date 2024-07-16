@@ -66,3 +66,4 @@ export { default as discover5 } from "./discover5.png";
 export { default as discover6 } from "./discover6.png";
 export { default as discover7 } from "./discover7.png";
 export { default as discover8 } from "./discover8.png";
+export { default as verve } from "./verve.png";
