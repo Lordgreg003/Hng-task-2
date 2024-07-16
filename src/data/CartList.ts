@@ -32,7 +32,6 @@ const imageProduct: Image[] = [
   { id: 8, src: sandal, alt: "Description 11" },
   { id: 6, src: gown1, alt: "Description 6" },
   { id: 5, src: frame999, alt: "Description 5" },
-
   { id: 8, src: image2, alt: "Description 9" },
   { id: 8, src: image3, alt: "Description 10" },
   { id: 8, src: sandal, alt: "Description 11" },

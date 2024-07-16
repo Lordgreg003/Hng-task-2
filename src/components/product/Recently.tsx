@@ -7,7 +7,10 @@ import "../../css/Style.css";
 
 const HomeScreen: React.FC = () => {
   return (
-    <section className="container  h-[22rem] py-8 relative mx-auto mt-10 scroll-smooth overflow-x-auto overflow-y-hidden  scrollbar-hide">
+    <section
+      className="container  h-[22rem] py-8 relative mx-auto mt-10 scroll-smooth overflow-x-auto overflow-y-hidden  scrollbar-hide"
+      id="recently"
+    >
       <div className="flex items-center">
         <div className="text-xl font-bold">Recently reviewed</div>
         <div className="border rounded-full bg-[#D9D9D9]">
